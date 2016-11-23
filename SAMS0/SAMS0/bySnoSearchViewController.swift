@@ -26,14 +26,10 @@ class bySnoSearchViewController: UIViewController {
         
         let snoResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultBySno") as! ResultBySnoTableViewController
         
-        present(snoResultVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(snoResultVC, animated: true)
         
     }
     
-    @IBAction func cancelBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-
     /*
     // MARK: - Navigation
 

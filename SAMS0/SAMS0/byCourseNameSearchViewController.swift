@@ -19,13 +19,10 @@ class byCourseNameSearchViewController: UIViewController {
     @IBAction func SearchByCourseNameBtn(_ sender: Any) {
         let courseNameResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultByCourseName") as! ResultByCourseNameTableViewController
         
-        present(courseNameResultVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(courseNameResultVC, animated: true)
         
     }
     
-    @IBAction func cancelBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
