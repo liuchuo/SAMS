@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         //launchscreen停留2秒
         Thread.sleep(forTimeInterval: 2.0)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

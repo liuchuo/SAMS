@@ -13,6 +13,8 @@
 		56DAC9801DE522D50088B7B6 /* SAMS0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC97E1DE522D50088B7B6 /* SAMS0.xcdatamodeld */; };
 		56DAC9821DE522D50088B7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56DAC9811DE522D50088B7B6 /* Assets.xcassets */; };
 		56DAC9851DE522D50088B7B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DAC9831DE522D50088B7B6 /* LaunchScreen.storyboard */; };
+		56DAC98D1DE590120088B7B6 /* bySnoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC98C1DE590120088B7B6 /* bySnoSearchViewController.swift */; };
+		56DAC98F1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC98E1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		56DAC9811DE522D50088B7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56DAC9841DE522D50088B7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56DAC9861DE522D50088B7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56DAC98C1DE590120088B7B6 /* bySnoSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bySnoSearchViewController.swift; sourceTree = "<group>"; };
+		56DAC98E1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = byCourseNameSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				56DAC9831DE522D50088B7B6 /* LaunchScreen.storyboard */,
 				56DAC9861DE522D50088B7B6 /* Info.plist */,
 				56DAC97E1DE522D50088B7B6 /* SAMS0.xcdatamodeld */,
+				56DAC98C1DE590120088B7B6 /* bySnoSearchViewController.swift */,
+				56DAC98E1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift */,
 			);
 			path = SAMS0;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			files = (
 				56DAC97A1DE522D50088B7B6 /* ViewController.swift in Sources */,
 				56DAC9781DE522D50088B7B6 /* AppDelegate.swift in Sources */,
+				56DAC98D1DE590120088B7B6 /* bySnoSearchViewController.swift in Sources */,
+				56DAC98F1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift in Sources */,
 				56DAC9801DE522D50088B7B6 /* SAMS0.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

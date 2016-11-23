@@ -21,11 +21,17 @@
                                 <rect key="frame" x="47" y="37" width="226" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="按学号查询" image="bySnoImage"/>
+                                <connections>
+                                    <segue destination="dF0-cc-8qa" kind="modal" id="dxB-sJ-Zfb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5vf-Qj-DXE">
                                 <rect key="frame" x="47" y="306" width="226" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="按课程名称查询" image="byCourseNameImage"/>
+                                <connections>
+                                    <segue destination="QKY-rf-au7" kind="modal" id="5FC-IO-3YA"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pinkhearticon" id="Fqi-0v-6Re">
                                 <rect key="frame" x="130" y="254" width="61" height="60"/>
@@ -37,7 +43,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="132"/>
+            <point key="canvasLocation" x="-93" y="210"/>
+        </scene>
+        <!--By Sno Search View Controller-->
+        <scene sceneID="uWY-NX-4Vh">
+            <objects>
+                <viewController id="dF0-cc-8qa" customClass="bySnoSearchViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRU-Tv-xaa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T8A-Z4-Z6X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG8-mx-UFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="5"/>
+        </scene>
+        <!--By Course Name Search View Controller-->
+        <scene sceneID="OcI-AD-ax0">
+            <objects>
+                <viewController id="QKY-rf-au7" customClass="byCourseNameSearchViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYy-nW-7TJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aSb-RN-HLH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bd-dp-LJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="618"/>
         </scene>
     </scenes>
     <resources>
