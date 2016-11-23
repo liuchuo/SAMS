@@ -29,23 +29,31 @@ class ResultByCourseNameTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
 
         // Configure the cell...
-
+        let label = cell.viewWithTag(102) as! UILabel
+        label.text = "test102"
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let editByCourseName = storyboard?.instantiateViewController(withIdentifier: "editByCourseName") as! EditScoreByCourseNameViewController
+        
+        present(editByCourseName, animated: true, completion: nil)
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
