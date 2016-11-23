@@ -16,6 +16,12 @@ class byCourseNameSearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func SearchByCourseNameBtn(_ sender: Any) {
+        let courseNameResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultByCourseName") as! ResultByCourseNameTableViewController
+        
+        present(courseNameResultVC, animated: true, completion: nil)
+        
+    }
     
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)

@@ -21,6 +21,15 @@ class bySnoSearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func SearchBySnoBtn(_ sender: Any) {
+        
+        let snoResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultBySno") as! ResultBySnoTableViewController
+        
+        present(snoResultVC, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
