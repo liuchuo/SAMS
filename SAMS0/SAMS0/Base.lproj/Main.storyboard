@@ -76,6 +76,9 @@
                                 <rect key="frame" x="199" y="276" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="取消"/>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="dF0-cc-8qa" eventType="touchUpInside" id="G1i-Yr-gkT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cherryicon" id="6dI-Nm-G1L">
                                 <rect key="frame" x="220" y="482" width="100" height="86"/>
@@ -114,6 +117,9 @@
                                 <rect key="frame" x="197" y="313" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="取消"/>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="QKY-rf-au7" eventType="touchUpInside" id="Cgc-bo-77p"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="请输入要查询的课程名称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="alj-Yn-EVy">
                                 <rect key="frame" x="0.0" y="196" width="208" height="21"/>
