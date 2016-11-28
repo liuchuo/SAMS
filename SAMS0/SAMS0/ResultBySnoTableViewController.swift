@@ -7,14 +7,9 @@
 //
 
 import UIKit
-import CoreData
 
 class ResultBySnoTableViewController: UITableViewController {
-    
-    var dataArr:Array<AnyObject> = []
-    var context:NSManagedObjectContext!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +18,6 @@ class ResultBySnoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +34,7 @@ class ResultBySnoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return 1
     }
 
     
@@ -52,13 +43,12 @@ class ResultBySnoTableViewController: UITableViewController {
 
         // Configure the cell...
         let label = cell.viewWithTag(101) as! UILabel
-        let os = dataArr[indexPath.row].value(forKey: "os")
         label.text = "test101"
         return cell
     }
+    
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = dataArr[indexPath.row] as! NSManagedObject
         
         let editBySnoVC = storyboard?.instantiateViewController(withIdentifier: "editBySno") as! EditScoreBySnoViewController
         
@@ -66,38 +56,26 @@ class ResultBySnoTableViewController: UITableViewController {
     
     }
     
-    func refreshData() {
-        let f = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-        try! dataArr = context.fetch(f)
-        
-        tableView.reloadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        refreshData()
-    }
-    
+  
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
-    
-    
+    */
+
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            context.delete(dataArr[indexPath.row] as! NSManagedObject)
-            try! context.save()
-            
-            refreshData()
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
