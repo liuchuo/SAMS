@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="FOx-BT-Ur7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="tns-Ov-QOF">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--查询方式-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,13 +40,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jw0-OZ-wOY"/>
+                    <navigationItem key="navigationItem" title="查询方式" id="jw0-OZ-wOY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="210"/>
+            <point key="canvasLocation" x="573" y="209"/>
         </scene>
-        <!--By Sno Search View Controller-->
+        <!--查询学号-->
         <scene sceneID="uWY-NX-4Vh">
             <objects>
                 <viewController id="dF0-cc-8qa" customClass="bySnoSearchViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,11 +85,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="T8A-Z4-Z6X"/>
+                    <navigationItem key="navigationItem" title="查询学号" id="T8A-Z4-Z6X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PG8-mx-UFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="5"/>
+            <point key="canvasLocation" x="1033" y="4"/>
         </scene>
         <!--Result By Sno Table View Controller-->
         <scene sceneID="9JT-ig-Lrb">
@@ -126,7 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf3-kJ-UM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1263" y="5"/>
+            <point key="canvasLocation" x="1397" y="4"/>
         </scene>
         <!--Edit Score By Sno View Controller-->
         <scene sceneID="SmT-yf-H8b">
@@ -173,9 +173,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWY-tq-uA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="5"/>
+            <point key="canvasLocation" x="1822" y="4"/>
         </scene>
-        <!--By Course Name Search View Controller-->
+        <!--查询课程-->
         <scene sceneID="OcI-AD-ax0">
             <objects>
                 <viewController id="QKY-rf-au7" customClass="byCourseNameSearchViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,11 +214,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aSb-RN-HLH"/>
+                    <navigationItem key="navigationItem" title="查询课程" id="aSb-RN-HLH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bd-dp-LJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="618"/>
+            <point key="canvasLocation" x="1033" y="617"/>
         </scene>
         <!--Result By Course Name Table View Controller-->
         <scene sceneID="wpO-hN-ohZ">
@@ -255,7 +255,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjQ-WY-1BV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1263" y="618"/>
+            <point key="canvasLocation" x="1397" y="617"/>
         </scene>
         <!--Edit Score By Course Name View Controller-->
         <scene sceneID="bRo-bL-MGc">
@@ -302,9 +302,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPf-UH-OIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="618"/>
+            <point key="canvasLocation" x="1822" y="617"/>
         </scene>
-        <!--Login View Controller-->
+        <!--用户登录-->
         <scene sceneID="U1g-8c-vC0">
             <objects>
                 <viewController id="FOx-BT-Ur7" customClass="LoginViewController" customModule="SAMS0" customModuleProvider="target" sceneMemberID="viewController">
@@ -318,7 +318,7 @@
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="loginButton:" destination="FOx-BT-Ur7" eventType="touchUpInside" id="Jet-at-H1X"/>
-                                    <segue destination="k60-A2-ZHl" kind="modal" id="10G-eY-FO9"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="vpu-ei-jTJ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" id="fTL-4b-Jst">
@@ -352,6 +352,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.82327486250061843" green="0.92942785703498998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="用户登录" id="Gmx-d6-N5R"/>
                     <connections>
                         <outlet property="password" destination="zpO-FM-yTb" id="ZJb-KK-71L"/>
                         <outlet property="rememberSwitch" destination="n9Y-kK-YZH" id="RCL-yj-X6h"/>
@@ -360,25 +361,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43q-dA-fVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="210"/>
+            <point key="canvasLocation" x="102" y="210"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Y0z-sP-6yB">
+        <scene sceneID="y9A-tS-XoH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k60-A2-ZHl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tns-Ov-QOF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xz5-Ik-a1O">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8fz-V3-XIf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q2c-fC-atb"/>
+                        <segue destination="FOx-BT-Ur7" kind="relationship" relationship="rootViewController" id="9Uc-F8-F1S"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GB3-WM-zwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZN-MS-aPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="210"/>
+            <point key="canvasLocation" x="-331" y="210"/>
         </scene>
     </scenes>
     <resources>

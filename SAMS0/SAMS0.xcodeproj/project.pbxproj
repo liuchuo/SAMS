@@ -77,13 +77,13 @@
 				56DAC9831DE522D50088B7B6 /* LaunchScreen.storyboard */,
 				56DAC9861DE522D50088B7B6 /* Info.plist */,
 				56DAC97E1DE522D50088B7B6 /* SAMS0.xcdatamodeld */,
+				565D47801DEDB7DA00926134 /* LoginViewController.swift */,
 				56DAC98C1DE590120088B7B6 /* bySnoSearchViewController.swift */,
 				56DAC98E1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift */,
 				56DAC9901DE5B0040088B7B6 /* ResultBySnoTableViewController.swift */,
 				56DAC9921DE5B01D0088B7B6 /* ResultByCourseNameTableViewController.swift */,
 				56DAC9941DE5B0F50088B7B6 /* EditScoreBySnoViewController.swift */,
 				56DAC9961DE5B1120088B7B6 /* EditScoreByCourseNameViewController.swift */,
-				565D47801DEDB7DA00926134 /* LoginViewController.swift */,
 			);
 			path = SAMS0;
 			sourceTree = "<group>";

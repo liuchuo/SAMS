@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
             UserDefaults.standard.setValue("", forKey: "Password")
         }
     }
+    
 
     /*
     // MARK: - Navigation
