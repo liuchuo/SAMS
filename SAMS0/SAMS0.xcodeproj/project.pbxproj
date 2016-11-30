@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565D47811DEDB7DA00926134 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565D47801DEDB7DA00926134 /* LoginViewController.swift */; };
 		56DAC9781DE522D50088B7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC9771DE522D50088B7B6 /* AppDelegate.swift */; };
 		56DAC97A1DE522D50088B7B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC9791DE522D50088B7B6 /* ViewController.swift */; };
 		56DAC97D1DE522D50088B7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DAC97B1DE522D50088B7B6 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		565D47801DEDB7DA00926134 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56DAC9741DE522D50088B7B6 /* SAMS0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMS0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DAC9771DE522D50088B7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DAC9791DE522D50088B7B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				56DAC9921DE5B01D0088B7B6 /* ResultByCourseNameTableViewController.swift */,
 				56DAC9941DE5B0F50088B7B6 /* EditScoreBySnoViewController.swift */,
 				56DAC9961DE5B1120088B7B6 /* EditScoreByCourseNameViewController.swift */,
+				565D47801DEDB7DA00926134 /* LoginViewController.swift */,
 			);
 			path = SAMS0;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				56DAC9951DE5B0F50088B7B6 /* EditScoreBySnoViewController.swift in Sources */,
 				56DAC98F1DE5902D0088B7B6 /* byCourseNameSearchViewController.swift in Sources */,
 				56DAC9971DE5B1120088B7B6 /* EditScoreByCourseNameViewController.swift in Sources */,
+				565D47811DEDB7DA00926134 /* LoginViewController.swift in Sources */,
 				56DAC9801DE522D50088B7B6 /* SAMS0.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
