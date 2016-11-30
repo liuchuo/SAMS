@@ -9,6 +9,7 @@
 import UIKit
 
 class EditScoreByCourseNameViewController: UIViewController {
+    @IBOutlet weak var successLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,12 @@ class EditScoreByCourseNameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveBtn(_ sender: Any) {
+        // 保存修改的分数的代码
+        
+        
+        successLabel.text = "您的修改已保存^_^"
+    }
 
     /*
     // MARK: - Navigation

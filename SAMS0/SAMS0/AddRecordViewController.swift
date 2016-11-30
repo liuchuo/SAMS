@@ -1,14 +1,14 @@
 //
-//  EditScoreBySnoViewController.swift
+//  AddRecordViewController.swift
 //  SAMS0
 //
-//  Created by ChenXin on 2016/11/23.
+//  Created by ChenXin on 2016/11/30.
 //  Copyright © 2016年 ChenXin. All rights reserved.
 //
 
 import UIKit
 
-class EditScoreBySnoViewController: UIViewController {
+class AddRecordViewController: UIViewController {
 
     @IBOutlet weak var successLabel: UILabel!
     
@@ -17,27 +17,21 @@ class EditScoreBySnoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func cancelBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-   
-    @IBAction func saveBtn(_ sender: Any) {
-        //保存修改的分数的代码
-        
-        
-        successLabel.text = "您的修改已保存^_^"
-        
+    @IBAction func cancelBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
-    
+    @IBAction func addBtn(_ sender: Any) {
+        //将记录添加到数据库中的代码
+        
+        successLabel.text = "您的记录已成功添加^_^"
+    }
     /*
     // MARK: - Navigation
 
