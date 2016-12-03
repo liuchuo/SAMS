@@ -392,7 +392,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PTE-0s-t6V">
-                                <rect key="frame" x="8" y="515" width="140" height="21"/>
+                                <rect key="frame" x="8" y="515" width="296" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -410,12 +410,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="添加记录" id="4jq-3P-bgV"/>
                     <connections>
+                        <outlet property="dataStructureTextField" destination="D7M-05-c6K" id="0HZ-8P-sAR"/>
+                        <outlet property="englishTextField" destination="WCL-MY-4JC" id="AJ7-HV-pac"/>
+                        <outlet property="historyTextField" destination="FiE-6d-H1p" id="kJP-MM-Wmq"/>
+                        <outlet property="javaTextField" destination="BDN-qg-bvi" id="s42-SL-WY2"/>
+                        <outlet property="mathTextField" destination="sZ0-76-KfB" id="hnZ-qi-Wn6"/>
+                        <outlet property="osTextField" destination="cEm-iK-e0R" id="308-ph-dZN"/>
+                        <outlet property="peTextField" destination="J3l-Th-kGd" id="bhi-ux-kC4"/>
+                        <outlet property="snameTextField" destination="AgC-fq-G7H" id="1nS-Vp-Ims"/>
+                        <outlet property="snoTextField" destination="WfD-Ae-MKs" id="hqv-F5-fLB"/>
+                        <outlet property="softwareEngineerTextField" destination="kdA-eG-ZzZ" id="TOl-Dd-TwI"/>
                         <outlet property="successLabel" destination="PTE-0s-t6V" id="HA8-1F-tFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaf-fd-Z4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="-386"/>
+            <point key="canvasLocation" x="1411" y="-416"/>
         </scene>
         <!--Result By Course Name Table View Controller-->
         <scene sceneID="wpO-hN-ohZ">

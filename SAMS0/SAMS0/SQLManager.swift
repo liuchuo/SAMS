@@ -39,9 +39,9 @@ public class SQLManager : NSObject {
             // 失败
             print("数据库打开失败~！")
         } else {
-            // 创建表的SQL语句（根据自己定义的数据model灵活改动）
+            // 创建表的SQL语句
             print("数据库打开成功~！")
-            let createStudentTableSQL = "CREATE TABLE IF NOT EXISTS 't_Student' ('sno' TEXT NOT NULL PRIMARY KEY AUTOINCREMENT, 'sname' TEXT, 'os' INTEGER, 'dataStructure' INTEGER, 'english' INTEGER, 'history' INTEGER, 'java' INTEGER, 'math' INTEGER, 'pe' INTEGER, 'softworeEngineer' INTEGER);"
+            let createStudentTableSQL = "CREATE TABLE IF NOT EXISTS 't_StuInfo' ('sno' TEXT NOT NULL PRIMARY KEY, 'sname' TEXT, 'os' INTEGER, 'dataStructure' INTEGER, 'english' INTEGER, 'history' INTEGER, 'java' INTEGER, 'math' INTEGER, 'pe' INTEGER, 'softworeEngineer' INTEGER);"
             if execSQL(SQL: createStudentTableSQL) == false {
                 // 失败
                 print("执行创建表的SQL语句出错~")

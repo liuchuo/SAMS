@@ -19,7 +19,7 @@ class StudentModel: NSObject {
     var java: Int = 0
     var math: Int = 0
     var pe: Int = 0
-    var sofewareEngineer: Int = 0
+    var softwareEngineer: Int = 0
     
     init(sno : String, sname : String, os : Int, dataStructure : Int, english : Int, history : Int, java : Int, math : Int, pe : Int, softwareEngineer : Int) {
         self.sno = sno

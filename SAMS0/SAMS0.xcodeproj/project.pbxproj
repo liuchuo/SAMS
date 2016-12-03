@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		565D47811DEDB7DA00926134 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565D47801DEDB7DA00926134 /* LoginViewController.swift */; };
 		565D47831DEE97D200926134 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565D47821DEE97D200926134 /* StudentModel.swift */; };
+		5684C6491DF2F41D0043AFF6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5684C6481DF2F41D0043AFF6 /* libsqlite3.tbd */; };
 		56A7E56E1DEEA1E0002A696E /* AddRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7E56D1DEEA1E0002A696E /* AddRecordViewController.swift */; };
 		56A7E5701DEEA7D3002A696E /* SQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7E56F1DEEA7D3002A696E /* SQLManager.swift */; };
 		56DAC9781DE522D50088B7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DAC9771DE522D50088B7B6 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		565D47801DEDB7DA00926134 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		565D47821DEE97D200926134 /* StudentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 		5684C6461DF2E7300043AFF6 /* SQLite-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite-Bridge.h"; sourceTree = "<group>"; };
+		5684C6481DF2F41D0043AFF6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		56A7E56D1DEEA1E0002A696E /* AddRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecordViewController.swift; sourceTree = "<group>"; };
 		56A7E56F1DEEA7D3002A696E /* SQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLManager.swift; sourceTree = "<group>"; };
 		56DAC9741DE522D50088B7B6 /* SAMS0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAMS0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,18 +54,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5684C6491DF2F41D0043AFF6 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5684C6471DF2F41D0043AFF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5684C6481DF2F41D0043AFF6 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56DAC96B1DE522D40088B7B6 = {
 			isa = PBXGroup;
 			children = (
 				5684C6461DF2E7300043AFF6 /* SQLite-Bridge.h */,
 				56DAC9761DE522D50088B7B6 /* SAMS0 */,
 				56DAC9751DE522D50088B7B6 /* Products */,
+				5684C6471DF2F41D0043AFF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,7 +324,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liuchuo.net.SAMS0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/SQLite-Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite-Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -328,7 +340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liuchuo.net.SAMS0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/SQLite-Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite-Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
