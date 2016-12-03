@@ -21,4 +21,21 @@ class StudentModel: NSObject {
     var pe: Int = 0
     var sofewareEngineer: Int = 0
     
+    init(sno : String, sname : String, os : Int, dataStructure : Int, english : Int, history : Int, java : Int, math : Int, pe : Int, softwareEngineer : Int) {
+        self.sno = sno
+        self.sname = sname
+        self.os = os
+        self.dataStructure = dataStructure
+        self.english = english
+        self.history = history
+        self.java = java
+        self.math = math
+        self.pe = pe
+        self.softwareEngineer = softwareEngineer
+    }
+    
+    override init() {
+        super.init()
+    }
+    
 }
