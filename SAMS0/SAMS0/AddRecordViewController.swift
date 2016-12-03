@@ -42,14 +42,16 @@ class AddRecordViewController: UIViewController {
         //将记录添加到数据库中的代码
         let sno : String = snoTextField.text!
         let sname : String = snameTextField.text!
-        let os : String = osTextField.text!
-        let dataStructure : String = dataStructureTextField.text!
-        let english : String = englishTextField.text!
-        let history : String = historyTextField.text!
-        let java : String = javaTextField.text!
-        let math : String = mathTextField.text!
-        let pe : String = peTextField.text!
-        let insertSQL = "INSERT INTO 't_StuInfo' (sno, sname, os, dataStructure, english, history, java, math, pe) VALUES ('\(sno)', '\(sname)','\(os)','\(dataStructure)','\(english)','\(history)','\(java)','\(math)','\(pe)');"
+        let os : Int = Int(osTextField.text!)!
+        let dataStructure : Int = Int(dataStructureTextField.text!)!
+        let english : Int = Int(englishTextField.text!)!
+        let history : Int = Int(historyTextField.text!)!
+        let java : Int = Int(javaTextField.text!)!
+        let math : Int = Int(mathTextField.text!)!
+        let pe : Int = Int(peTextField.text!)!
+        let softwareEngineer : Int = Int(softwareEngineerTextField.text!)!
+        print("~~~")
+        let insertSQL = "INSERT INTO 't_StuInfo' (sno, sname, os, dataStructure, english, history, java, math, pe, softwareEngineer) VALUES ('\(sno)', '\(sname)', \(os), \(dataStructure), \(english), \(history), \(java), \(math), \(pe), \(softwareEngineer));"
         if SQLManager.shareInstance().execSQL(SQL: insertSQL) == true {
             print("插入数据添加成功")
             successLabel.text = "您的记录已成功添加^_^"

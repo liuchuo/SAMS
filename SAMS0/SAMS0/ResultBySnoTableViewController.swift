@@ -10,6 +10,13 @@ import UIKit
 
 class ResultBySnoTableViewController: UITableViewController {
 
+    // 数据源
+    var stuArr : Array<AnyObject> = []
+    var Searchsno : String = ""
+    
+    // 课程名称
+    var courseNameArr : Array<String> = ["学号", "姓名", "操作系统", "数据结构", "英语CE4", "中国近代史", "Java语言程序设计", "高等数学", "大学体育4", "软件工程"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +25,23 @@ class ResultBySnoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadTableViewData()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        loadTableViewData()
+    }
+    
+    func loadTableViewData() {
+        let querySQL = "SELECT sno, sname, os, dataStructure, english, history, java, math, pe, softwareEngineer FROM 't_stuInfo' WHERE sno = '\(Searchsno)';"
+        let resultDictArr = SQLManager.shareInstance().queryDataBase(querySQL: querySQL)
+        stuArr = []
+        for dict in resultDictArr! {
+            let mymodel = StudentModel(sno: dict["sno"] as! String, sname: dict["sname"] as! String, os: dict["os"] as! Int, dataStructure: dict["sname"] as! Int, english: dict["english"] as! Int, history: dict["history"] as! Int, java: dict["java"] as! Int, math: dict["math"] as! Int, pe: dict["pe"] as! Int, softwareEngineer: dict["softwareEngineer"] as! Int)
+            stuArr.append(mymodel)
+        }
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,7 +56,7 @@ class ResultBySnoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return stuArr.count - 2
     }
 
     
@@ -42,8 +64,10 @@ class ResultBySnoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
 
         // Configure the cell...
-        let label = cell.viewWithTag(101) as! UILabel
-        label.text = "test101"
+        let courseNameLabel = cell.viewWithTag(101) as! UILabel
+        courseNameLabel.text = courseNameArr[indexPath.row]
+        let scoreLabel = cell.viewWithTag(102) as! UILabel
+        scoreLabel.text = "test102"
         return cell
     }
     

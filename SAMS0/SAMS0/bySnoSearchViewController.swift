@@ -10,7 +10,8 @@ import UIKit
 
 
 class bySnoSearchViewController: UIViewController {
-
+    @IBOutlet weak var snoTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,9 +25,10 @@ class bySnoSearchViewController: UIViewController {
     
     
     @IBAction func SearchBySnoBtn(_ sender: Any) {
-        
+        // 查询的语句执行
+        let Searchsno : String = snoTextField.text!
         let snoResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultBySno") as! ResultBySnoTableViewController
-        
+        snoResultVC.Searchsno = Searchsno
         self.navigationController?.pushViewController(snoResultVC, animated: true)
         
     }

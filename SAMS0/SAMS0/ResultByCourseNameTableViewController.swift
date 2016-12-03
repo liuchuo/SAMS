@@ -42,8 +42,11 @@ class ResultByCourseNameTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
 
         // Configure the cell...
-        let label = cell.viewWithTag(102) as! UILabel
-        label.text = "test102"
+        let snoLabel = cell.viewWithTag(103) as! UILabel
+        snoLabel.text = "test103"
+        
+        let scoreLabel = cell.viewWithTag(104) as! UILabel
+        scoreLabel.text = "test104"
         return cell
     }
     
