@@ -36,7 +36,7 @@ class ResultBySnoTableViewController: UITableViewController {
         let resultDictArr = SQLManager.shareInstance().queryDataBase(querySQL: querySQL)
         stuArr = []
         for dict in resultDictArr! {
-            let mymodel = StudentModel(sno: dict["sno"] as! String, sname: dict["sname"] as! String, os: dict["os"] as! Int, dataStructure: dict["sname"] as! Int, english: dict["english"] as! Int, history: dict["history"] as! Int, java: dict["java"] as! Int, math: dict["math"] as! Int, pe: dict["pe"] as! Int, softwareEngineer: dict["softwareEngineer"] as! Int)
+            let mymodel = StudentModel(sno: dict["sno"] as! String, sname: dict["sname"] as! String, os: dict["os"] as! Int, dataStructure: dict["dataStructure"] as! Int, english: dict["english"] as! Int, history: dict["history"] as! Int, java: dict["java"] as! Int, math: dict["math"] as! Int, pe: dict["pe"] as! Int, softwareEngineer: dict["softwareEngineer"] as! Int)
             stuArr.append(mymodel)
         }
         tableView.reloadData()
@@ -56,7 +56,7 @@ class ResultBySnoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return stuArr.count - 2
+        return 8
     }
 
     
@@ -65,7 +65,7 @@ class ResultBySnoTableViewController: UITableViewController {
 
         // Configure the cell...
         let courseNameLabel = cell.viewWithTag(101) as! UILabel
-        courseNameLabel.text = courseNameArr[indexPath.row]
+        courseNameLabel.text = courseNameArr[indexPath.row + 2]
         let scoreLabel = cell.viewWithTag(102) as! UILabel
         scoreLabel.text = "test102"
         return cell
