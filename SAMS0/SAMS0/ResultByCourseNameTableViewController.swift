@@ -86,25 +86,30 @@ class ResultByCourseNameTableViewController: UITableViewController {
         
     }
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let sno = snoArr[indexPath.row]
+            let deleteSQL = "DELETE FROM 't_StuInfo' WHERE sno = '\(sno)';"
+            if SQLManager.shareInstance().execSQL(SQL: deleteSQL) == true {
+                print("删除成功！~")
+                loadTableViewData()
+            }
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
