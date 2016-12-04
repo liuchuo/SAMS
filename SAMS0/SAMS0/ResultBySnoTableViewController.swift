@@ -16,6 +16,7 @@ class ResultBySnoTableViewController: UITableViewController {
     
     // 课程名称
     var courseNameArr : Array<String> = ["学号", "姓名", "操作系统", "数据结构", "英语CE4", "中国近代史", "Java语言程序设计", "高等数学", "大学体育4", "软件工程"]
+    var columnNameArr : Array<String> = ["sno", "sname", "os", "dataStructure", "english", "history", "java", "math", "pe", "softwareEngineer"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,9 @@ class ResultBySnoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let editBySnoVC = storyboard?.instantiateViewController(withIdentifier: "editBySno") as! EditScoreBySnoViewController
-        
+        editBySnoVC.sno = stuArr[0] as! String
+        editBySnoVC.courseName = columnNameArr[indexPath.row + 2] as! String
+        editBySnoVC.score = stuArr[indexPath.row + 2] as! String
         present(editBySnoVC, animated: true, completion: nil)
     
     }

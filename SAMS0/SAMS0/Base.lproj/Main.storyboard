@@ -192,6 +192,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="editTextField" destination="FWH-zL-936" id="7dF-sy-efC"/>
                         <outlet property="successLabel" destination="3qM-mQ-LTT" id="pDf-li-4JL"/>
                     </connections>
                 </viewController>
