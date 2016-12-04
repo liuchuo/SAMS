@@ -36,8 +36,16 @@ class ResultBySnoTableViewController: UITableViewController {
         let resultDictArr = SQLManager.shareInstance().queryDataBase(querySQL: querySQL)
         stuArr = []
         for dict in resultDictArr! {
-            let mymodel = StudentModel(sno: dict["sno"] as! String, sname: dict["sname"] as! String, os: dict["os"] as! Int, dataStructure: dict["dataStructure"] as! Int, english: dict["english"] as! Int, history: dict["history"] as! Int, java: dict["java"] as! Int, math: dict["math"] as! Int, pe: dict["pe"] as! Int, softwareEngineer: dict["softwareEngineer"] as! Int)
-            stuArr.append(mymodel)
+            stuArr.append(dict["sno"]!)
+            stuArr.append(dict["sname"]!)
+            stuArr.append(dict["os"]!)
+            stuArr.append(dict["dataStructure"]!)
+            stuArr.append(dict["english"]!)
+            stuArr.append(dict["history"]!)
+            stuArr.append(dict["java"]!)
+            stuArr.append(dict["math"]!)
+            stuArr.append(dict["pe"]!)
+            stuArr.append(dict["softwareEngineer"]!)
         }
         tableView.reloadData()
     }
@@ -66,8 +74,9 @@ class ResultBySnoTableViewController: UITableViewController {
         // Configure the cell...
         let courseNameLabel = cell.viewWithTag(101) as! UILabel
         courseNameLabel.text = courseNameArr[indexPath.row + 2]
+        
         let scoreLabel = cell.viewWithTag(102) as! UILabel
-        scoreLabel.text = "test102"
+        scoreLabel.text = stuArr[indexPath.row + 2] as! String
         return cell
     }
     
