@@ -10,6 +10,7 @@ import UIKit
 
 class byCourseNameSearchViewController: UIViewController {
 
+    @IBOutlet weak var searchTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +18,9 @@ class byCourseNameSearchViewController: UIViewController {
     }
 
     @IBAction func SearchByCourseNameBtn(_ sender: Any) {
+        let SearchCourseName : String = searchTextField.text!
         let courseNameResultVC = storyboard?.instantiateViewController(withIdentifier: "ResultByCourseName") as! ResultByCourseNameTableViewController
-        
+        courseNameResultVC.SearchCourseName = SearchCourseName
         self.navigationController?.pushViewController(courseNameResultVC, animated: true)
         
     }

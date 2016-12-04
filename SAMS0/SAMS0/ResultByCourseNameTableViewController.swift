@@ -9,7 +9,12 @@
 import UIKit
 
 class ResultByCourseNameTableViewController: UITableViewController {
-
+    // 数据源
+    var snoArr : Array<String> = []
+    var snameArr : Array<String> = []
+    var scoreArr : Array<String> = []
+    var SearchCourseName : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +23,25 @@ class ResultByCourseNameTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadTableViewData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadTableViewData()
+    }
+    
+    func loadTableViewData() {
+        let querySQL = "SELECT sno, sname, os, dataStructure, english, history, java, math, pe, softwareEngineer FROM 't_stuInfo';"
+        let resultDictArr = SQLManager.shareInstance().queryDataBase(querySQL: querySQL)
+        snoArr = []
+        snameArr = []
+        scoreArr = []
+        for dict in resultDictArr! {
+            snoArr.append(dict["sno"]! as! String)
+            snameArr.append(dict["sname"]! as! String)
+            scoreArr.append(dict["\(SearchCourseName)"]! as! String)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +58,7 @@ class ResultByCourseNameTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return snoArr.count
     }
 
     
@@ -43,17 +67,21 @@ class ResultByCourseNameTableViewController: UITableViewController {
 
         // Configure the cell...
         let snoLabel = cell.viewWithTag(103) as! UILabel
-        snoLabel.text = "test103"
+        snoLabel.text = snoArr[indexPath.row]
         
-        let scoreLabel = cell.viewWithTag(104) as! UILabel
-        scoreLabel.text = "test104"
+        let snameLabel = cell.viewWithTag(104) as! UILabel
+        snameLabel.text = snameArr[indexPath.row]
+        
+        let scoreLabel = cell.viewWithTag(105) as! UILabel
+        scoreLabel.text = scoreArr[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let editByCourseName = storyboard?.instantiateViewController(withIdentifier: "editByCourseName") as! EditScoreByCourseNameViewController
-        
+        editByCourseName.sno = snoArr[indexPath.row]
+        editByCourseName.courseName = SearchCourseName
         present(editByCourseName, animated: true, completion: nil)
         
     }

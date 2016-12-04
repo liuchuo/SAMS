@@ -9,8 +9,12 @@
 import UIKit
 
 class EditScoreByCourseNameViewController: UIViewController {
+    
+    @IBOutlet weak var editTextField: UITextField!
     @IBOutlet weak var successLabel: UILabel!
-
+    
+    var sno = ""
+    var courseName : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,8 +32,11 @@ class EditScoreByCourseNameViewController: UIViewController {
     
     @IBAction func saveBtn(_ sender: Any) {
         // 保存修改的分数的代码
-        
-        
+        let editScore : Int = Int(editTextField.text!)!
+        let updateSQL = "UPDATE 't_StuInfo' SET \(courseName) = '\(editScore)' WHERE sno = '\(sno)'"
+        if SQLManager.shareInstance().execSQL(SQL: updateSQL) == true {
+            print("数据库中分数修改成功")
+        }
         successLabel.text = "您的修改已保存^_^"
     }
 
