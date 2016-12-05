@@ -103,8 +103,8 @@ class ResultByCourseNameTableViewController: UITableViewController {
             let deleteSQL = "DELETE FROM 't_StuInfo' WHERE sno = '\(sno)';"
             if SQLManager.shareInstance().execSQL(SQL: deleteSQL) == true {
                 print("删除成功！~")
-                loadTableViewData()
             }
+            loadTableViewData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
